@@ -2,8 +2,6 @@ import sys
 
 digit_string = sys.argv[1]
 
-digit_sum = 0
-for digit in digit_string:
-    digit_sum += int(digit)
+digit_sum = sum([int(digit) for digit in digit_string])
 
 print(digit_sum)

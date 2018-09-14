@@ -15,4 +15,4 @@ def to_json(func):
 def get_data():
     return {'data': 1}
 
-#print(get_data())
+print(get_data())

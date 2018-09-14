@@ -16,25 +16,25 @@ def load_storage(storage_path):
     with open(storage_path, 'r') as f:
         return json.load(f)
 
+if __name__ == '__main__':
+    storage_path = os.path.join(tempfile.gettempdir(), 'storage.data')
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--key')
+    parser.add_argument('--val')
+    args = parser.parse_args()
 
-storage_path = os.path.join(tempfile.gettempdir(), 'storage.data')
-parser = argparse.ArgumentParser()
-parser.add_argument('--key')
-parser.add_argument('--val')
-args = parser.parse_args()
+    storage = load_storage(storage_path)
 
-storage = load_storage(storage_path)
+    # --key --val
+    if args.val:
+        if args.key not in storage:
+            storage[args.key] = list()
+        storage[args.key].append(args.val)
 
-# --key --val
-if args.val:
-    if args.key not in storage:
-        storage[args.key] = list()
-    storage[args.key].append(args.val)
-
-    save_storage(storage_path, storage)
-# --key
-else:
-    if args.key not in storage:
-        print('')
+        save_storage(storage_path, storage)
+    # --key
     else:
-        print(', '.join(storage[args.key]))
+        if args.key not in storage:
+            print('')
+        else:
+            print(', '.join(storage[args.key]))
