@@ -1,0 +1,129 @@
+<meta charset="utf-8"/>
+<co-content>
+ <p>
+  На этой неделе мы с вами реализуем собственный key-value storage. Вашей задачей будет написать скрипт, который принимает в качестве аргументов ключи и значения и выводит информацию из хранилища (в нашем случае — из файла).
+ </p>
+ <p>
+  <strong>
+   Запись значения по ключу
+  </strong>
+ </p>
+ <p>
+  <em>
+   &gt; storage.py --key key_name --val value
+  </em>
+ </p>
+ <p>
+  <strong>
+   Получение значения по ключу
+  </strong>
+ </p>
+ <p>
+  <em>
+   &gt; storage.py --key key_name
+  </em>
+ </p>
+ <p>
+  Ответом в данном случае будет вывод с помощью
+  <em>
+   print
+  </em>
+  соответствующего значения
+ </p>
+ <p>
+  <em>
+   &gt; value
+  </em>
+ </p>
+ <p>
+  или
+ </p>
+ <p>
+  <em>
+   &gt; value_1, value_2
+  </em>
+ </p>
+ <p>
+  если значений по этому ключу было записано несколько. Метрики сохраняйте в порядке их добавления. Обратите внимание на пробел после запятой.
+ </p>
+ <p>
+  Если значений по ключу не было найдено, выводите пустую строку или None.
+ </p>
+ <p>
+  Для работы с аргументами командной строки используйте модуль
+  <a href="https://docs.python.org/3/howto/argparse.html">
+   argparse
+  </a>
+  . Вашей задачей будет считать аргументы, переданные вашей программе, и записать соответствующую пару ключ-значение в файл хранилища или вывести значения, если был передан только ключ. Хранить данные вы можете в формате JSON с помощью стандартного модуля
+  <a href="https://docs.python.org/3/library/json.html">
+   json
+  </a>
+  . Проверьте добавление нескольких ключей и разных значений.
+ </p>
+ <p>
+  Файл следует создавать с помощью модуля
+  <a href="https://docs.python.org/3/library/tempfile.html">
+   tempfile
+  </a>
+  .
+ </p>
+ <pre language="python">import os
+import tempfile
+
+storage_path = os.path.join(tempfile.gettempdir(), 'storage.data')
+with open(storage_path, 'w') as f:
+  ...</pre>
+ <p>
+  Создайте скрипт хранилища и загрузите его на платформу.
+ </p>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>
