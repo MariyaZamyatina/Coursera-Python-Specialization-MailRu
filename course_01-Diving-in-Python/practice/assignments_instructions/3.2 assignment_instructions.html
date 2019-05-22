@@ -1,0 +1,591 @@
+<meta charset="utf-8"/>
+<co-content>
+ <h1 level="1">
+  Классы и наследование
+ </h1>
+ <p>
+  Как правило задачи про классы носят не вычислительный характер. Обычно нужно написать классы, которые отвечают определенным интерфейсам. Насколько удобны эти интерфейсы и как сильно связаны классы между собой, определит легкость их использования в будущих программах.
+ </p>
+ <p>
+  Предположим есть данные о разных автомобилях и спецтехнике. Данные представлены в виде таблицы с характеристиками. Обратите внимание на то, что некоторые колонки присущи только легковым автомобилям, например, кол-во пассажирских мест. В свою очередь только у грузовых автомобилей есть длина, ширина и высота кузова.
+ </p>
+ <p>
+ </p>
+ <table columns="7" rows="5">
+  <tr>
+   <td>
+    <p>
+     Тип (car_type)
+    </p>
+   </td>
+   <td>
+    <p>
+     Марка (brand)
+    </p>
+   </td>
+   <td>
+    <p>
+     Кол-во пассажирских мест (passenger_seats_count)
+    </p>
+   </td>
+   <td>
+    <p>
+     Фото (photo_file_name)
+    </p>
+   </td>
+   <td>
+    <p>
+     Кузов ДxШxВ, м (body_whl)
+    </p>
+   </td>
+   <td>
+    <p>
+     Грузоподъемность, Тонн (carrying)
+    </p>
+   </td>
+   <td>
+    <p>
+     Дополнительно (extra)
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     car
+    </p>
+   </td>
+   <td>
+    <p>
+     Nissan xTtrail
+    </p>
+   </td>
+   <td>
+    <p>
+     4
+    </p>
+   </td>
+   <td>
+    <p>
+     f1.jpeg
+    </p>
+   </td>
+   <td>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+     2.5
+    </p>
+   </td>
+   <td>
+    <p>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     truck
+    </p>
+   </td>
+   <td>
+    <p>
+     Man
+    </p>
+   </td>
+   <td>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+     f2.jpeg
+    </p>
+   </td>
+   <td>
+    <p>
+     8x3x2.5
+    </p>
+   </td>
+   <td>
+    <p>
+     20
+    </p>
+   </td>
+   <td>
+    <p>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     car
+    </p>
+   </td>
+   <td>
+    <p>
+     Mazda 6
+    </p>
+   </td>
+   <td>
+    <p>
+     4
+    </p>
+   </td>
+   <td>
+    <p>
+     f3.jpeg
+    </p>
+   </td>
+   <td>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+     2.5
+    </p>
+   </td>
+   <td>
+    <p>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     spec_machine
+    </p>
+   </td>
+   <td>
+    <p>
+     Hitachi
+    </p>
+   </td>
+   <td>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+     f4.jpeg
+    </p>
+   </td>
+   <td>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+     1.2
+    </p>
+   </td>
+   <td>
+    <p>
+     Легкая техника для уборки снега
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p>
+  Вам необходимо создать свою иерархию классов для данных, которые описаны в таблице.
+ </p>
+ <p>
+  <em>
+   BaseCar
+  </em>
+ </p>
+ <p>
+  <em>
+   Car(BaseCar)
+  </em>
+ </p>
+ <p>
+  <em>
+   Truck(BaseCar)
+  </em>
+ </p>
+ <p>
+  <em>
+   SpecMachine(BaseCar)
+  </em>
+ </p>
+ <p>
+  У любого объекта есть обязательный атрибут car_type. Он означает тип объекта и может принимать одно из значений: car, truck, spec_machine.
+ </p>
+ <p>
+  Также у любого объекта из иерархии есть фото в виде имени файла — обязательный атрибут photo_file_name.
+ </p>
+ <p>
+  В базовом классе нужно реализовать метод get_photo_file_ext для получения расширения файла (“.png”, “.jpeg” и т.д.) с фото. Расширение файла можно получить при помощи os.path.splitext.
+ </p>
+ <p>
+  Для грузового автомобиля необходимо разделить характеристики кузова на отдельные составляющие body_length, body_width, body_height. Разделитель — латинская буква x. Характеристики кузова могут быть заданы в виде пустой строки, в таком случае все составляющие равны 0. Обратите внимание на то, что характеристики кузова должны быть вещественными числами.
+ </p>
+ <p>
+  Также для класса грузового автомобиля необходимо реализовать метод get_body_volume, возвращающий объем кузова в метрах кубических.
+ </p>
+ <p>
+  Все обязательные атрибуты для объектов Car, Truck и SpecMachine перечислены в таблице ниже, где 1 - означает, что атрибут обязателен для объекта, 0 - атрибут должен отсутствовать.
+ </p>
+ <table columns="4" rows="10">
+  <tr>
+   <td>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+     Car
+    </p>
+   </td>
+   <td>
+    <p>
+     Truck
+    </p>
+   </td>
+   <td>
+    <p>
+     SpecMachine
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     car_type
+    </p>
+   </td>
+   <td>
+    <p>
+     1
+    </p>
+   </td>
+   <td>
+    <p>
+     1
+    </p>
+   </td>
+   <td>
+    <p>
+     1
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     photo_file_name
+    </p>
+   </td>
+   <td>
+    <p>
+     1
+    </p>
+   </td>
+   <td>
+    <p>
+     1
+    </p>
+   </td>
+   <td>
+    <p>
+     1
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     brand
+    </p>
+   </td>
+   <td>
+    <p>
+     1
+    </p>
+   </td>
+   <td>
+    <p>
+     1
+    </p>
+   </td>
+   <td>
+    <p>
+     1
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     carrying
+    </p>
+   </td>
+   <td>
+    <p>
+     1
+    </p>
+   </td>
+   <td>
+    <p>
+     1
+    </p>
+   </td>
+   <td>
+    <p>
+     1
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     passenger_seats_count
+    </p>
+   </td>
+   <td>
+    <p>
+     1
+    </p>
+   </td>
+   <td>
+    <p>
+     0
+    </p>
+   </td>
+   <td>
+    <p>
+     0
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     body_width
+    </p>
+   </td>
+   <td>
+    <p>
+     0
+    </p>
+   </td>
+   <td>
+    <p>
+     1
+    </p>
+   </td>
+   <td>
+    <p>
+     0
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     body_height
+    </p>
+   </td>
+   <td>
+    <p>
+     0
+    </p>
+   </td>
+   <td>
+    <p>
+     1
+    </p>
+   </td>
+   <td>
+    <p>
+     0
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     body_length
+    </p>
+   </td>
+   <td>
+    <p>
+     0
+    </p>
+   </td>
+   <td>
+    <p>
+     1
+    </p>
+   </td>
+   <td>
+    <p>
+     0
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     extra
+    </p>
+   </td>
+   <td>
+    <p>
+     0
+    </p>
+   </td>
+   <td>
+    <p>
+     0
+    </p>
+   </td>
+   <td>
+    <p>
+     1
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p>
+  Далее необходимо реализовать функцию, на вход которой подается имя файла в формате csv. Файл содержит данные аналогичные строкам из таблицы. Вам необходимо прочитать этот файл построчно при помощи модуля стандартной библиотеки csv. Затем проанализировать строки и создать список нужных объектов с автомобилями и специальной техникой. Функция должна возвращать список объектов.
+ </p>
+ <p>
+  Не важно как вы назовете свои классы, главное чтобы их атрибуты имели имена:
+ </p>
+ <pre language="plain_text">car_type
+brand
+passenger_seats_count
+photo_file_name
+body_width
+body_height
+body_length
+carrying
+extra</pre>
+ <p>
+  <em>
+   И методы:
+  </em>
+ </p>
+ <p>
+  <em>
+   get_photo_file_ext
+  </em>
+  и
+  <em>
+   get_body_volume
+  </em>
+ </p>
+ <p>
+  У каждого объекта из иерархии должен быть свой набор атрибутов и методов. У класса легковой автомобиль не должно быть метода get_body_volume в отличие от класса грузового автомобиля.
+ </p>
+ <p>
+  Функция, которая парсит строки входного массива, должна называться get_car_list. Для проверки работы своей реализации функции get_car_list и всех созданных классов вам необходимо использовать следующий csv-файл:
+ </p>
+ <asset assettype="generic" extension="csv" id="nQBe-5krEeeedw7dGwHKMg" name="coursera_week3_cars">
+ </asset>
+ <p>
+  Первая строка в исходном файле — это заголовок csv, который содержит имена колонок. Нужно пропустить первую строку из исходного файла. Обратите внимание на то, что исходный файл с данными содержит некорректные строки, которые нужно пропустить. Если возникают исключения в процессе создания объектов из строк csv-файла, то требуется их корректно обработать стандартным способом. Проверьте работу вашего кода с входным файлом, прежде чем загружать задание для оценки.
+ </p>
+ <p>
+  Пример чтения csv файла:
+ </p>
+ <pre language="python">import csv
+
+with open(csv_filename) as csv_fd:
+    reader = csv.reader(csv_fd, delimiter=';')
+    next(reader)  # пропускаем заголовок
+    for row in reader:
+        print(row)</pre>
+ <p>
+  Также обратите внимание, что все значения в csv файле при чтении будут python-строками. Нужно преобразовать строку в int для passenger_seats_count, во float для carrying, а также во float для body_width body_height, body_length.
+ </p>
+ <p>
+  Также ваша программа должна быть готова к тому, что в некоторых строках данные могут быть заполнены некорректно. Например, число колонок меньше . В таком случае нужно проигнорировать подобные строки и не создавать объекты. Строки с пустым значением для body_whl игнорироваться не должны. Вы можете использовать механизм исключений для обработки ошибок.
+ </p>
+ <p>
+  Ниже приведен пример с заготовкой кода для выполнения задания.
+ </p>
+ <pre language="python">class CarBase:
+    def __init__(self, brand, photo_file_name, carrying):
+        pass
+
+
+class Car(CarBase):
+    def __init__(self, brand, photo_file_name, carrying, passenger_seats_count):
+        pass
+
+
+class Truck(CarBase):
+    def __init__(self, brand, photo_file_name, carrying, body_whl):
+        pass
+
+
+class SpecMachine(CarBase):
+    def __init__(self, brand, photo_file_name, carrying, extra):
+        pass
+
+
+def get_car_list(csv_filename):
+    car_list = []
+    return car_list</pre>
+ <p>
+  Вам необходимо расширить функционал исходных классов, дополнить методы нужным кодом и реализовать функцию get_car_list.
+ </p>
+ <p>
+  Успехов!
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>
