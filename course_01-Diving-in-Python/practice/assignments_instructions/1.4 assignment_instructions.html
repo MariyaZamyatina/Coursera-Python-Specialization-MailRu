@@ -1,0 +1,88 @@
+<meta charset="utf-8"/>
+<co-content>
+ <p>
+ </p>
+ <p>
+  Python очень активно применяют ученые со всего мира в своих исследованиях. В этом задании мы с вами попробуем с помощью Python найти корни квадратного уравнения.
+ </p>
+ <p>
+  Напомним, что квадратное уравнение выглядит следующим образом:
+ </p>
+ <img alt="" assetid="R0aLunqZEeeOygpRbdVQKg" src="data:image/png;base64,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"/>
+ <p>
+  На вход программе мы подадим коэффициенты a, b и c - ваша цель напечатать 2 корня квадратного уравнения (каждый с новой строки).
+ </p>
+ <p>
+  Если вы не помните формулу (а мы и сами ее не помним!), позволяющую найти корни такого уравнения, обратитесь за помощью к статье в
+  <a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D1%82%D0%BD%D0%BE%D0%B5_%D1%83%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5">
+   Википедии
+  </a>
+  .
+ </p>
+ <p>
+  Чтобы не усложнять вашу задачу все коэффициенты, которые мы будем подавать вам на вход являются коэффициентами, которые в итоге дают 2 целых корня квадратного уравнения.
+ </p>
+ <p>
+  Коэффициенты a, b, c вы можете получить следующим образом:
+ </p>
+ <pre language="python">import sys
+a = int(sys.argv[1])
+b = int(sys.argv[2])
+c = int(sys.argv[3])</pre>
+ <p>
+  Вывод вашей программы для коэффициентов a = 1, b = -3, c = -4:
+ </p>
+ <pre language="plain_text">-1
+4</pre>
+ <p>
+  Корни должны быть приведены к целочисленному виду перед выводом на экран, порядок вывода корней произвольный. Успехов в решении!
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

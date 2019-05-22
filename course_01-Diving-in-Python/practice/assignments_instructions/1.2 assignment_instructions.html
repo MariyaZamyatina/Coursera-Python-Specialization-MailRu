@@ -1,0 +1,84 @@
+<meta charset="utf-8"/>
+<co-content>
+ <p>
+  Давайте начнем с несложной задачки - ваша цель найти сумму цифр, из которых состоит строка.
+ </p>
+ <p>
+  Вы должны создать Python модуль
+  <strong>
+   solution.py
+  </strong>
+  и загрузить его на платформу – этот файл мы запустим с аргументом командной строки – строкой, состоящей из цифр. Например, вот такой:
+ </p>
+ <p>
+  “873”
+ </p>
+ <p>
+  Чтобы получить ввод, вы в начале программы можете считать его, используя модуль стандартной библиотеки sys:
+ </p>
+ <pre language="python">import sys
+digit_string = sys.argv[1]</pre>
+ <p>
+  В переменной digit_string будет содержаться строка “873” (ну или какая-то другая строка, сгенерированная нами, в том числе другой длины). В строке, подаваемой на вход, будут только символы, соответствующие цифрам от 0 до 9.
+ </p>
+ <p>
+  В результате ваша программа должна напечатать на экран сумму цифр (для строки “873” сумма будет 18).
+ </p>
+ <p>
+  То, что полученная программа ведет себя должным образом можно проверить локально, запустив ее следующим образом:
+ </p>
+ <pre language="plain_text">python3 solution.py 873</pre>
+ <p>
+  В списке sys.argv будут лежать аргументы командной строки, sys.argv[0] - имя запущенного файла, sys.argv[1] - строка, сумму цифр которой необходимо посчитать и вывести на экран
+ </p>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>
