@@ -1,0 +1,109 @@
+<meta charset="utf-8"/>
+<co-content>
+ <p>
+  В этом задании вам нужно создать интерфейс для работы с файлами. Класс File должен поддерживать несколько необычных операций.
+ </p>
+ <p>
+  <strong>
+   Класс инициализируется полным путем.
+  </strong>
+ </p>
+ <pre language="python">obj = File('/tmp/file.txt')</pre>
+ <p>
+  <strong>
+   Класс должен поддерживать метод write.
+  </strong>
+ </p>
+ <pre language="python">obj.write('line\n')</pre>
+ <p>
+  <strong>
+   Объекты типа File должны поддерживать сложение.
+  </strong>
+ </p>
+ <pre language="python">first = File('/tmp/first')
+second = File('/tmp/second')
+
+new_obj = first + second</pre>
+ <p>
+  В этом случае создается новый файл и файловый объект, в котором содержимое второго файла добавляется к содержимому первого файла. Новый файл должен создаваться в директории, полученной с помощью
+  <a href="https://docs.python.org/3/library/tempfile.html">
+   tempfile.gettempdir
+  </a>
+  . Для получения нового пути можно использовать
+  <a href="https://docs.python.org/3/library/os.path.html#os.path.join">
+   os.path.join
+  </a>
+  .
+ </p>
+ <p>
+  <strong>
+   Объекты типа File должны поддерживать протокол итерации, причем итерация проходит по строкам файла.
+  </strong>
+ </p>
+ <pre language="python">for line in File('/tmp/file.txt'):
+  ...</pre>
+ <p>
+  <strong>
+   И наконец, при выводе файла с помощью функции print должен печататься его полный путь, переданный при инициализации.
+  </strong>
+ </p>
+ <pre language="python">obj = File('/tmp/file.txt')
+
+print(obj)
+'/tmp/file.txt'</pre>
+ <p>
+  Опишите свой класс в скрипте и загрузите на платформу.
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>
