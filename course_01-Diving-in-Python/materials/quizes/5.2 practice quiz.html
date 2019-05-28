@@ -1,0 +1,248 @@
+<meta charset="utf-8"/>
+<h3>
+ Question 1
+</h3>
+<co-content>
+ <p>
+  Для чего нужны сокеты?
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="0" type="checkbox"/>
+  <co-content>
+   <span>
+    Для организации взаимодействия процессов, работающих на разных серверах
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="0" type="checkbox"/>
+  <co-content>
+   <span>
+    Для хранения общих данных нескольких потоков, работающих на одном сервере
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<h3>
+ Question 2
+</h3>
+<co-content>
+ <p>
+  Если программа сервер, работающая с сокетом, написана на языке, отличном от python, возможно написать программу клиент на python для отправки данных на сервер?
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="1" type="radio"/>
+  <co-content>
+   <span>
+    Нет
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="1" type="radio"/>
+  <co-content>
+   <span>
+    Да
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<h3>
+ Question 3
+</h3>
+<co-content>
+ <p>
+  Отметьте истинные утверждения:
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="2" type="checkbox"/>
+  <co-content>
+   <span>
+    контекстный менеджер для сокета управляет скоростью чтения из сокета
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="2" type="checkbox"/>
+  <co-content>
+   <span>
+    контекстный менеджер позволяет контролировать закрытие сокетов
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="2" type="checkbox"/>
+  <co-content>
+   <span>
+    контекстный менеджер автоматически выполнит вызов метода close для открытого сокета
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="2" type="checkbox"/>
+  <co-content>
+   <span>
+    контекстный менеджер автоматически устанавливает новое соединение, если произойдет его разрыв
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<h3>
+ Question 4
+</h3>
+<co-content>
+ <p>
+  Отметьте истинные утверждения:
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="3" type="checkbox"/>
+  <co-content>
+   <span>
+    исключение типа socket.error генерируется при возникновении ошибок работы с сокетами на python
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="3" type="checkbox"/>
+  <co-content>
+   <span>
+    socket timeout нужен для установки нового соединения
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="3" type="checkbox"/>
+  <co-content>
+   <span>
+    при возникновении socket.error сокет автоматически закрывается
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="3" type="checkbox"/>
+  <co-content>
+   <span>
+    socket timeout нужен для ограничения времени ожидания работы системных вызовов, связанных с сокетами
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<h3>
+ Question 5
+</h3>
+<co-content>
+ <p>
+  Как можно обработать большое количество одновременных соединений к серверу?
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="4" type="checkbox"/>
+  <co-content>
+   <span>
+    Создание пула процессов и отдельных потоков для каждого соединения
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="4" type="checkbox"/>
+  <co-content>
+   <span>
+    Создание отдельного процесса для каждого соединения
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="4" type="checkbox"/>
+  <co-content>
+   <span>
+    Создание отдельного потока для каждого нового соединения
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="4" type="checkbox"/>
+  <co-content>
+   <span>
+    Процессы и потоки не нужны, python автоматически обработает все соединения
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

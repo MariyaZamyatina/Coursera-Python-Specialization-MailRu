@@ -1,0 +1,3 @@
+example string1
+example string2
+example string3

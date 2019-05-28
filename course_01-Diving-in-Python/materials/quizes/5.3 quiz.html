@@ -1,0 +1,653 @@
+<meta charset="utf-8"/>
+<h3>
+ Question 1
+</h3>
+<co-content>
+ <p>
+  Системный вызов fork
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="0" type="checkbox"/>
+  <co-content>
+   <span>
+    создает точную копию родительского процесса
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="0" type="checkbox"/>
+  <co-content>
+   <span>
+    используется для получения pid родительского процесса
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="0" type="checkbox"/>
+  <co-content>
+   <span>
+    используется для создания дочернего процесса
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="0" type="checkbox"/>
+  <co-content>
+   <span>
+    используется для вызова функций в отдельных потоках
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<h3>
+ Question 2
+</h3>
+<co-content>
+ <p>
+  Системный вызов fork
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="1" type="checkbox"/>
+  <co-content>
+   <span>
+    в родительском процессе вызов fork возвращает pid дочернего
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="1" type="checkbox"/>
+  <co-content>
+   <span>
+    в дочернем процессе вызов fork возвращает 0
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="1" type="checkbox"/>
+  <co-content>
+   <span>
+    в родительском процессе вызов fork возвращает 0
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="1" type="checkbox"/>
+  <co-content>
+   <span>
+    в дочернем процессе вызов fork возвращает pid родительского процесса
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<h3>
+ Question 3
+</h3>
+<co-content>
+ <p>
+  Что происходит с памятью в дочернем процессе при работе с Python?
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="2" type="radio"/>
+  <co-content>
+   <span>
+    Копируется из родительского процесса
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="2" type="radio"/>
+  <co-content>
+   <span>
+    Разделяется с родительским процессом
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<h3>
+ Question 4
+</h3>
+<co-content>
+ <p>
+  Файловые дескрипторы в дочернем процессе
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="3" type="checkbox"/>
+  <co-content>
+   <span>
+    будут переоткрыты Python интерпретатором автоматически
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="3" type="checkbox"/>
+  <co-content>
+   <span>
+    будут скопированы
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="3" type="checkbox"/>
+  <co-content>
+   <span>
+    будут скопированы и переоткрыты
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="3" type="checkbox"/>
+  <co-content>
+   <span>
+    будут недоступны, их нужно переоткрыть заново
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<h3>
+ Question 5
+</h3>
+<co-content>
+ <p>
+  Выделить истинные выражения:
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="4" type="checkbox"/>
+  <co-content>
+   <span>
+    предпочтительнее использовать контекстный менеджер для работы с блокировками в Python
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="4" type="checkbox"/>
+  <co-content>
+   <span>
+    блокировки нужно брать в одном порядке, освобождать в обратном
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="4" type="checkbox"/>
+  <co-content>
+   <span>
+    блокировки нужно брать в одном порядке, освобождать в произвольном
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="4" type="checkbox"/>
+  <co-content>
+   <span>
+    блокировки нужно брать в одном порядке, освобождать строго в том же порядке
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<h3>
+ Question 6
+</h3>
+<co-content>
+ <p>
+  Очереди замедляют процесс работы потоков Python, лучше использовать объекты блокировки
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="5" type="radio"/>
+  <co-content>
+   <span>
+    Да
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="5" type="radio"/>
+  <co-content>
+   <span>
+    Нет
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<h3>
+ Question 7
+</h3>
+<co-content>
+ <p>
+  Выделить истинные выражения:
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="6" type="checkbox"/>
+  <co-content>
+   <span>
+    GIL никак не влияет на выполнение отдельных процессов на Python3
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="6" type="checkbox"/>
+  <co-content>
+   <span>
+    GIL замедляет выполнение главного потока управления в Python3, даже если нет других потоков
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="6" type="checkbox"/>
+  <co-content>
+   <span>
+    GIL запрещает одновременное выполнение инструкций байткода в разных потоках
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="6" type="checkbox"/>
+  <co-content>
+   <span>
+    GIL нужен для защиты памяти интерпретатора от разрушений
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<h3>
+ Question 8
+</h3>
+<co-content>
+ <p>
+  Если программа на Python выполняет много операций ввода вывода (IO-bound), то для ускорения ее работы нужно
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="7" type="radio"/>
+  <co-content>
+   <span>
+    создать отдельные процессы
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="7" type="radio"/>
+  <co-content>
+   <span>
+    разбить ее на отдельные функции, выполнить их в потоках
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<h3>
+ Question 9
+</h3>
+<co-content>
+ <p>
+  Если программа на Python выполняет операции вычисления, требующие только CPU (CPU-bound), то для ускорения ее работы нужно
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="8" type="radio"/>
+  <co-content>
+   <span>
+    разбить ее на отдельные функции, выполнить их в потоках
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="8" type="radio"/>
+  <co-content>
+   <span>
+    создать отдельные процессы
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<h3>
+ Question 10
+</h3>
+<co-content>
+ <p>
+  Генератор в Python – это
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="9" type="checkbox"/>
+  <co-content>
+   <span>
+    инструкция yield
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="9" type="checkbox"/>
+  <co-content>
+   <span>
+    специальный вызов yield from
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="9" type="checkbox"/>
+  <co-content>
+   <span>
+    функция в которой присутствует инструкция yield
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="9" type="checkbox"/>
+  <co-content>
+   <span>
+    объект типа concurrent.futures.Future
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<h3>
+ Question 11
+</h3>
+<co-content>
+ <p>
+  Отметить все истинные утверждения:
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="10" type="checkbox"/>
+  <co-content>
+   <span>
+    итератор прерывает свое выполнение на каждой итерации, сохраняя состояние локальных переменных
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="10" type="checkbox"/>
+  <co-content>
+   <span>
+    итератор хранит значение для генерации следующего элемента последовательности в self
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="10" type="checkbox"/>
+  <co-content>
+   <span>
+    исключение StopIteration используется для остановки работы итератора
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="10" type="checkbox"/>
+  <co-content>
+   <span>
+    генератор хранит значение для генерации следующего элемента последовательности в локальных переменных
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<h3>
+ Question 12
+</h3>
+<co-content>
+ <p>
+  Отметить все истинные утверждения:
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="11" type="checkbox"/>
+  <co-content>
+   <span>
+    сопрограммы исполняются в отдельных потоках параллельно
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="11" type="checkbox"/>
+  <co-content>
+   <span>
+    из одной сопрограммы можно вызвать другую при помощи yield from
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="11" type="checkbox"/>
+  <co-content>
+   <span>
+    сопрограмма может прерывать свою работу, сохраняя свое состояние и значения всех локальных переменных
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="11" type="checkbox"/>
+  <co-content>
+   <span>
+    исключения нельзя обрабатывать в сопрограммах, это нужно делать в основном потоке
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<h3>
+ Question 13
+</h3>
+<co-content>
+ <p>
+  Отметить все истинные утверждения, касающиеся asyncio event loop:
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="12" type="checkbox"/>
+  <co-content>
+   <span>
+    выполняет все корутины последовательно, переключая контекст между ними
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="12" type="checkbox"/>
+  <co-content>
+   <span>
+    отвечает за выделение памяти в основном процессе
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="12" type="checkbox"/>
+  <co-content>
+   <span>
+    позволяет выполнять функции и callable Python объекты
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="12" type="checkbox"/>
+  <co-content>
+   <span>
+    выполняет несколько корутин параллельно в разных потоках
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="12" type="checkbox"/>
+  <co-content>
+   <span>
+    позволяет выполнять корутины, зарегистрированные в нем
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="12" type="checkbox"/>
+  <co-content>
+   <span>
+    переключает контекст между Python-потоками
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<h3>
+ Question 14
+</h3>
+<co-content>
+ <p>
+  Отметить все истинные утверждения:
+ </p>
+</co-content>
+<form>
+ <label>
+  <input name="13" type="checkbox"/>
+  <co-content>
+   <span>
+    объект типа asyncio.Task хранит в себе связанную корутину и содержит статус ее выполнения
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="13" type="checkbox"/>
+  <co-content>
+   <span>
+    блокирующий код в Python никак не повлияет на выполнение других корутин в asyncio event loop
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="13" type="checkbox"/>
+  <co-content>
+   <span>
+    из объектов типа asyncio.Future можно создавать цепочки и дожидаться их выполнения в asyncio event loop
+   </span>
+  </co-content>
+  <br/>
+ </label>
+ <label>
+  <input name="13" type="checkbox"/>
+  <co-content>
+   <span>
+    объект типа asyncio.Task выполняется в отдельном потоке управления, никак не влияя на выполнения других объектов типа asyncio.Task
+   </span>
+  </co-content>
+  <br/>
+ </label>
+</form>
+<hr/>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>
